@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:id="@+id/body"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageButton
+        android:id="@+id/info_view_btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/toolbar_new" />
+
+    <ImageButton
+        android:id="@+id/info_view_btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/toolbar_forward" />
+
+    <com.google.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="a15368e7446dd29"
+        ads:loadAdOnCreate="true" />
+
+    <ListView
+        android:id="@+id/info_view_listInfo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/adView"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/info_view_btnAdd" >
+    </ListView>
+
+    <ImageButton
+        android:id="@+id/info_view_btnEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/info_view_listInfo"
+        android:layout_toRightOf="@+id/info_view_btnAdd"
+        android:src="@drawable/toolbar_playlist" />
+
+    <ImageButton
+        android:id="@+id/info_view_btnSelectAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/info_view_listInfo"
+        android:layout_toRightOf="@+id/info_view_btnEdit"
+        android:src="@drawable/toolbar_edit_selectinverse" />
+
+    <ImageButton
+        android:id="@+id/info_view_btnDel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/info_view_listInfo"
+        android:layout_toRightOf="@+id/info_view_btnSelectAll"
+        android:src="@drawable/toolbar_edit_delete" />
+
+    <ImageButton
+        android:id="@+id/info_view_btnHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/info_view_listInfo"
+        android:layout_toRightOf="@+id/info_view_btnDel"
+        android:src="@drawable/toolbar_edit_property" />
+
+    <RelativeLayout
+        android:id="@+id/info_view_rlLoading"
+        style="@style/BGblack"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/adView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:visibility="invisible" >
+
+        <TextView
+            android:id="@+id/info_view_txtLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/info_view_txtLoading" />
+    </RelativeLayout>
+
+</RelativeLayout>

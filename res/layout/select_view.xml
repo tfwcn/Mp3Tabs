@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageButton
+        android:id="@+id/select_view_btnSelectAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/toolbar_edit_selectinverse" />
+
+    <ImageButton
+        android:id="@+id/select_view_btnSure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/toolbar_edit_done" />
+
+    <com.google.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="a15368e7446dd29"
+        ads:loadAdOnCreate="true" />
+
+    <ListView
+        android:id="@+id/select_view_listSelect"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/adView"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/select_view_txtPath" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/select_view_txtPath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/select_view_btnSelectAll"
+        android:text="TextView" />
+
+    <Spinner
+        android:id="@+id/select_view_listCharset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/select_view_btnSure"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/select_view_btnSure"
+        android:layout_toRightOf="@+id/select_view_btnSelectAll" />
+
+</RelativeLayout>

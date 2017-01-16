@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/help_view_info"
+        style="@style/FontW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/setting_view_txtTitle"
+        android:layout_alignBottom="@+id/setting_view_txtTitle"
+        android:layout_toLeftOf="@+id/setting_view_txtTitle"
+        android:text="歌名" />
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/FontW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/setting_view_txtArtist"
+        android:layout_alignBottom="@+id/setting_view_txtArtist"
+        android:layout_toLeftOf="@+id/setting_view_txtArtist"
+        android:text="歌手" />
+
+    <RadioGroup
+        android:id="@+id/setting_view_rgChangeType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/setting_view_txtName"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/setting_view_rbChangeTabs"
+            style="@style/FontW"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.53"
+            android:checked="true"
+            android:text="改标签" />
+
+        <RadioButton
+            android:id="@+id/setting_view_rbChangeName"
+            style="@style/FontW"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/setting_view_txtName"
+            android:layout_toLeftOf="@+id/setting_view_chkTitle"
+            android:layout_weight="0.51"
+            android:text="改文件名" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/setting_view_txtName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/setting_view_txtArtist"
+        android:layout_below="@+id/setting_view_rgChangeType"
+        android:layout_marginTop="14dp"
+        android:layout_toLeftOf="@+id/setting_view_chkTitle"
+        android:ems="10"
+        android:singleLine="true"
+        android:text="%1 - %2" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/setting_view_txtArtist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/setting_view_txtTitle"
+        android:layout_toLeftOf="@+id/setting_view_chkAlbum"
+        android:layout_toRightOf="@+id/textView4"
+        android:ems="10"
+        android:singleLine="true"
+        android:text="%2" />
+
+    <EditText
+        android:id="@+id/setting_view_txtAlbum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/setting_view_txtArtist"
+        android:layout_below="@+id/setting_view_txtArtist"
+        android:layout_toLeftOf="@+id/setting_view_chkAlbum"
+        android:ems="10"
+        android:singleLine="true"
+        android:text="%3" />
+
+    <CheckBox
+        android:id="@+id/setting_view_chkAlbum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/setting_view_txtAlbum" />
+
+    <CheckBox
+        android:id="@+id/setting_view_chkArtist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/setting_view_txtAlbum"
+        android:layout_toRightOf="@+id/setting_view_txtAlbum" />
+
+    <CheckBox
+        android:id="@+id/setting_view_chkTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/setting_view_chkArtist"
+        android:layout_alignParentRight="true" />
+
+    <EditText
+        android:id="@+id/setting_view_txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/setting_view_txtArtist"
+        android:layout_alignRight="@+id/setting_view_txtName"
+        android:layout_below="@+id/setting_view_txtName"
+        android:ems="10"
+        android:singleLine="true"
+        android:text="%1" />
+
+    <TextView
+        android:id="@+id/info_view_txtLoading"
+        style="@style/FontW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/setting_view_txtName"
+        android:layout_alignBottom="@+id/setting_view_txtName"
+        android:layout_alignRight="@+id/help_view_info"
+        android:text="文件名" />
+
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/FontW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/setting_view_txtAlbum"
+        android:layout_alignBottom="@+id/setting_view_txtAlbum"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="17dp"
+        android:text="专辑" />
+
+</RelativeLayout>

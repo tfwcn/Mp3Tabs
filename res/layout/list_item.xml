@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/list_item_txtPath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/list_item_txtFileName"
+        android:layout_below="@+id/list_item_txtFileName"
+        android:text="位置" />
+
+    <TextView
+        android:id="@+id/list_item_txtFileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/list_item_imgChecked"
+        android:text="文件名" />
+
+    <TextView
+        android:id="@+id/list_item_txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/list_item_txtPath"
+        android:layout_below="@+id/list_item_txtPath"
+        android:text="歌名 - 歌手" />
+
+    <TextView
+        android:id="@+id/list_item_txtAlbum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/list_item_txtTitle"
+        android:layout_below="@+id/list_item_txtTitle"
+        android:text="专辑" />
+
+    <TextView
+        android:id="@+id/list_item_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/list_item_txtAlbum"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" />
+
+    <ImageView
+        android:id="@+id/list_item_imgChecked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/list_item_txtPath"
+        android:src="@drawable/popupbox_checkbox_unchecked"
+        android:layout_marginTop="10dp" />
+
+</RelativeLayout>
